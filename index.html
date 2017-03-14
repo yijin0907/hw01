@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        #num{
+            border: red solid 2px;
+            width: 150px;
+            height: 50px;
+        }
+        button{
+            width: 75px;
+            font-size: 15px;
+        }
+    </style>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
 </head>
 <body>
+    <h1>homework01</h1>
     關&nbsp;&nbsp;關&nbsp;&nbsp;雎&nbsp;&nbsp;鳩<br>
     在&nbsp;&nbsp;河&nbsp;&nbsp;之&nbsp;&nbsp;洲<br>
     <!--    註解此行-->
@@ -63,5 +76,19 @@
     </table>
     <hr>
     <a href="http://www.google.com/doodles/evidence-of-water-found-on-mars" target="_new"><img src="http://www.google.com/logos/doodles/2015/evidence-of-water-found-on-mars-5652760466817024.2-hp2x.gif" alt="火星上發現水存在的證據"></a>
+    <hr>
+    <br><br>
+    <h1>homework02</h1><br>
+    <p id="num"></p>
+    <button type="submit" onclick="launch()">確認</button>
+    <script>
+        function launch() {
+            d3.select('#num').text(random(1911, 2016));
+        }
+
+        function random(n, m) {
+            return Math.ceil(Math.random() * (m - n) + n);
+        }
+    </script>
 </body>
 </html>
